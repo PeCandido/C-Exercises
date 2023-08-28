@@ -1,1 +1,32 @@
+#include <stdio.h>
+#include <string.h>
 
+int main(){
+    float nota;
+    int cont_nota6 = 0;
+    int cont_nota46 = 0; 
+    int cont_nota4 = 0;
+
+    printf("Digite a nota do aluno: ");
+    scanf("%f%*c", &nota);
+
+    while(nota >= 0)
+    {
+        if(nota >= 6){
+            cont_nota6++;
+        } 
+        else if(nota >= 4 && nota < 6){
+            cont_nota46++;
+        }
+        else{
+            cont_nota4++;
+        }
+
+        printf("Digite a nota do aluno: ");
+        scanf("%f%*c", &nota);
+    }
+
+    printf("Notas acima de 6: %d\n",cont_nota6);
+    printf("Notas acima de 4 e abaixo de 6: %d\n", cont_nota46);
+    printf("Notas abaixo de 4: %d\n", cont_nota4);
+}
